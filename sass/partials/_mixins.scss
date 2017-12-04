@@ -1,0 +1,11 @@
+@mixin lrg-col {
+  width:quarter-width(4);
+  height: half-height(2);
+  font-size: 25px;
+}
+
+@mixin sml-col {
+  width:quarter-width(4);
+  height: half-height(4);
+  font-size: 15px;
+}
