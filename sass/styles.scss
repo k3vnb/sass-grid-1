@@ -1,36 +1,11 @@
 @import 'partials/reset';
 @import 'partials/mixins';
+@import 'partials/colors';
 
-[class*='col'] {
-    float: left;
-    padding: 1em;
-    min-height: 1px;
-    }
 
 $open-sans: 'Open Sans', sans-serif;
 $bree-serif: 'Bree Serif', serif;
 
-$mint: #d8f5e8;
-$teal: #2bccc3;
-$tomato: #fe623f;
-$gold: #ffbc17;
-
-$mint-tier-one: mix($mint, $mint, 65%);
-$teal-tier-one: mix($teal, $mint, 65%);
-$gold-tier-one: mix($gold, $mint, 65%);
-$tomato-tier-one: mix($tomato, $mint, 65%);
-$mint-tier-two: mix($mint, $teal, 65%);
-$teal-tier-two: mix($teal, $teal, 65%);
-$gold-tier-two: mix($gold, $teal, 65%);
-$tomato-tier-two: mix($tomato, $teal, 65%);
-$mint-tier-three: mix($mint, $gold, 65%);
-$teal-tier-three: mix($teal, $gold, 65%);
-$gold-tier-three: mix($gold, $gold, 65%);
-$tomato-tier-three: mix($tomato, $gold, 65%);
-$mint-tier-four: mix($mint, $tomato, 65%);
-$teal-tier-four: mix($teal, $tomato, 65%);
-$gold-tier-four: mix($gold, $tomato, 65%);
-$tomato-tier-four: mix($tomato, $tomato, 65%);
 
 @function quarter-width($first) {
   @return $row-length / $first;
@@ -40,11 +15,29 @@ $tomato-tier-four: mix($tomato, $tomato, 65%);
 }
 
 $row-length: 92vw;
+.container {
+  margin: auto;
+  max-width: 1001px;
+}
+
+[class*='col'] {
+  float: left;
+  padding: .5% 1em;
+  min-height: 1px;
+  max-height: 225px;
+  font-family: $open-sans;
+}
 
 .row {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+}
+
+.main-content {
+  margin-left: 3%;
+  margin-bottom: 100px;
 }
 
 .col-a {
@@ -52,7 +45,16 @@ $row-length: 92vw;
 }
 .col-b {
   @include sml-col;
+  max-height: 125px;
 }
+
+@for $stretch-col from 1 through 20 {
+  $width: percentage(1 / $stretch-col);
+  .col-#{$stretch-col} {
+    width: $width;
+  }
+}
+
 
 .col-1 {
   background-color: $mint;
@@ -144,4 +146,32 @@ $row-length: 92vw;
 
 .numero {
   color: lightgrey;
+}
+
+@media screen and (max-width:700px) {
+  .row {display: block;
+  }
+  .col-a {
+    width: 50%;
+  }
+  .col-b {
+    width: 25%;
+  }
+}
+@media screen and (max-width:475px){
+  .row {
+    display: block;
+  }
+  .col {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  @for $stretch-text from 5 through 20 {
+    $size: percentage(1 / $stretch-text);
+    .col-#{$stretch-text} {
+      font-size: $size;
+    }
+  }
 }
