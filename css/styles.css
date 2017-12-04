@@ -1,0 +1,70 @@
+[class*='col'] {
+  float: left;
+  padding: 1em;
+  min-height: 1px; }
+
+.col-1 {
+  background-color: #d8f5e8; }
+
+.col-2 {
+  background-color: #2bccc3; }
+
+.col-3 {
+  background-color: #ffbc17; }
+
+.col-4 {
+  background-color: #fe623f; }
+
+.col-5 {
+  background-color: #d8f5e8; }
+
+.col-6 {
+  background-color: #68dad0; }
+
+.col-7 {
+  background-color: #f1d060; }
+
+.col-8 {
+  background-color: #f1957a; }
+
+.col-9 {
+  background-color: #9be7db; }
+
+.col-10 {
+  background-color: #2bccc3; }
+
+.col-11 {
+  background-color: #b5c253; }
+
+.col-12 {
+  background-color: #b4876d; }
+
+.col-13 {
+  background-color: #e6e19f; }
+
+.col-14 {
+  background-color: #75c687; }
+
+.col-15 {
+  background-color: #ffbc17; }
+
+.col-16 {
+  background-color: #fe8231; }
+
+.col-17 {
+  background-color: #e5c2ad; }
+
+.col-18 {
+  background-color: #75a795; }
+
+.col-19 {
+  background-color: #ff9d25; }
+
+.col-20 {
+  background-color: #fe623f; }
+
+.col {
+  width: 75px;
+  height: 150px; }
+
+/*# sourceMappingURL=styles.css.map */

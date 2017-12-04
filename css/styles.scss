@@ -1,0 +1,124 @@
+[class*='col'] {
+    float: left;
+    padding: 1em;
+    min-height: 1px;
+    }
+
+$mint: #d8f5e8;
+$teal: #2bccc3;
+$tomato: #fe623f;
+$gold: #ffbc17;
+
+// @function tier-one-color($first, $mint, 65%) {
+//
+// }
+
+$mint-tier-one: mix($mint, $mint, 65%);
+$teal-tier-one: mix($teal, $mint, 65%);
+$gold-tier-one: mix($gold, $mint, 65%);
+$tomato-tier-one: mix($tomato, $mint, 65%);
+$mint-tier-two: mix($mint, $teal, 65%);
+$teal-tier-two: mix($teal, $teal, 65%);
+$gold-tier-two: mix($gold, $teal, 65%);
+$tomato-tier-two: mix($tomato, $teal, 65%);
+$mint-tier-three: mix($mint, $gold, 65%);
+$teal-tier-three: mix($teal, $gold, 65%);
+$gold-tier-three: mix($gold, $gold, 65%);
+$tomato-tier-three: mix($tomato, $gold, 65%);
+$mint-tier-four: mix($mint, $tomato, 65%);
+$teal-tier-four: mix($teal, $tomato, 65%);
+$gold-tier-four: mix($gold, $tomato, 65%);
+$tomato-tier-four: mix($tomato, $tomato, 65%);
+
+@function quarter-width($first) {
+  @return $row / $first;
+}
+@function half-height($first) {
+  @return $row / $first;
+}
+
+$row: 300px;
+
+.col-1 {
+  background-color: $mint;
+}
+
+.col-2 {
+  background-color: $teal;
+}
+
+.col-3 {
+  background-color: $gold;
+}
+
+.col-4 {
+  background-color: $tomato;
+}
+
+.col-5 {
+  background-color: $mint-tier-one;
+}
+
+.col-6 {
+  background-color: $teal-tier-one;
+}
+
+.col-7 {
+  background-color: $gold-tier-one;
+}
+
+.col-8 {
+  background-color: $tomato-tier-one;
+}
+
+.col-9 {
+  background-color: $mint-tier-two;
+}
+
+.col-10 {
+  background-color: $teal-tier-two;
+}
+
+.col-11 {
+  background-color: $gold-tier-two;
+}
+
+.col-12 {
+  background-color: $tomato-tier-two;
+}
+
+.col-13 {
+  background-color: $mint-tier-three;
+}
+
+.col-14 {
+  background-color: $teal-tier-three;
+}
+
+.col-15 {
+  background-color: $gold-tier-three;
+}
+
+.col-16 {
+  background-color: $tomato-tier-three;
+}
+.col-17 {
+  background-color: $mint-tier-four;
+}
+
+.col-18 {
+  background-color: $teal-tier-four;
+}
+
+.col-19 {
+  background-color: $gold-tier-four;
+}
+
+.col-20 {
+  background-color: $tomato-tier-four;
+}
+
+.col {
+  width:quarter-width(4);
+  height: half-height(2);
+}
